@@ -1,4 +1,4 @@
-// shameless copypaste from https://github.com/aceakash/string-similarity/blob/master/src/index.js
+// copypaste from https://github.com/aceakash/string-similarity/blob/master/src/index.js but typed
 export function compareTwoStrings(first:string, second:string) : number {
 	first = first.replace(/\s+/g, '')
 	second = second.replace(/\s+/g, '')
@@ -33,8 +33,6 @@ export function compareTwoStrings(first:string, second:string) : number {
 }
 
 export function findBestMatch(mainString:string, targetStrings:string[]) : BestMatchResult {
-	if (!areArgsValid(mainString, targetStrings)) throw new Error('Bad arguments: First argument should be a string, second should be an array of strings');
-	
 	const ratings = [];
 	let bestMatchIndex = 0;
 
@@ -51,14 +49,6 @@ export function findBestMatch(mainString:string, targetStrings:string[]) : BestM
 	const bestMatch = ratings[bestMatchIndex]
 	
 	return { ratings: ratings, bestMatch: bestMatch, bestMatchIndex: bestMatchIndex } as BestMatchResult;
-}
-
-function areArgsValid(mainString:string, targetStrings:string[]):boolean {
-	if (typeof mainString !== 'string') return false;
-	if (!Array.isArray(targetStrings)) return false;
-	if (!targetStrings.length) return false;
-	if (!targetStrings.every( s => typeof s === 'string')) return false;
-	return true;
 }
 
 export class BestMatchResult{
