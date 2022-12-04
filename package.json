@@ -1,0 +1,48 @@
+{
+  "name": "basic-speech-grammar",
+  "version": "1.0.2",
+  "description": "Basic grammar system for SpeechRecognition",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janmarques/basic-speech-grammar"
+  },
+  "keywords": [
+    "Grammar",
+    "SpeechRecognition"
+  ],
+  "author": "Jan Marques",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janmarques/basic-speech-grammar"
+  },
+  "homepage": "https://github.com/janmarques/basic-speech-grammar",
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "codecov": "^3.1.0",
+    "jest": "^23.6.0",
+    "prettier": "^1.13.2",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "typescript": "^2.8.3"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "@types/dom-speech-recognition": "^0.0.1"
+  }
+}
