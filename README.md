@@ -1,4 +1,4 @@
-# Basic speech grammar - use case
+# Basic speech recognition grammar - use case
 When working with SpeechRecognition, you are given back a range of possibilities about word that the user said.
 
 If your application works in the sense of "commands", meaning you know beforehand which words your are looking (listening) for, then this package could help you.
@@ -50,3 +50,5 @@ This comparison is done using [this project|https://github.com/aceakash/string-s
 The comparison is purely based on the written similarity, not the auditive similarity.
 
 It is considered a "match" if the similarity is 0.6 or higher. This is configurable in the tryFindNeedle() options.
+
+Spaces and capitalization are ignored when comparing strings.
