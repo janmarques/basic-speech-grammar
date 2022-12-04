@@ -4,9 +4,9 @@ When working with SpeechRecognition, you are given back a range of possibilities
 If your application works in the sense of "commands", meaning you know beforehand which words your are looking (listening) for, then this package could help you.
 
 ## How to use
-Install with `npm i basic-speech-grammar`
+Install with `npm i basic-speech-recognition-grammar`
 
-Import the tryFindNeedle method `import { isLast, tryFindNeedle } from 'basic-speech-grammar';`
+Import the tryFindNeedle method `import { isLast, tryFindNeedle } from 'basic-speech-recognition-grammar';`
 
 In the `onresult` handler of `SpeechRecognition`, pass that whole event to `tryFindNeedle`. 
 
@@ -45,7 +45,7 @@ this.reco.onresult = (x) => {
 ## Implementation details
 The possible words said are compared with the predefined haystack you provide.
 
-This comparison is done using [this project|https://github.com/aceakash/string-similarity]. 
+This comparison is done using [this project](https://github.com/aceakash/string-similarity). 
 
 The comparison is purely based on the written similarity, not the auditive similarity.
 

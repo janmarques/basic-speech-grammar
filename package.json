@@ -1,6 +1,6 @@
 {
   "name": "basic-speech-recognition-grammar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Basic grammar system for SpeechRecognition",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
